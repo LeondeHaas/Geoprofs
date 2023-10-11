@@ -1,0 +1,59 @@
+﻿@page
+@model Verlofsysteem.Pages.Verlofs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>VerlofModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.Reason" class="control-label"></label>
+                <input asp-for="VerlofModel.Reason" class="form-control" />
+                <span asp-validation-for="VerlofModel.Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.Description" class="control-label"></label>
+                <input asp-for="VerlofModel.Description" class="form-control" />
+                <span asp-validation-for="VerlofModel.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.StartDate" class="control-label"></label>
+                <input asp-for="VerlofModel.StartDate" class="form-control" />
+                <span asp-validation-for="VerlofModel.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.EndDate" class="control-label"></label>
+                <input asp-for="VerlofModel.EndDate" class="form-control" />
+                <span asp-validation-for="VerlofModel.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.StartTime" class="control-label"></label>
+                <input asp-for="VerlofModel.StartTime" class="form-control" />
+                <span asp-validation-for="VerlofModel.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerlofModel.EndTime" class="control-label"></label>
+                <input asp-for="VerlofModel.EndTime" class="form-control" />
+                <span asp-validation-for="VerlofModel.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
